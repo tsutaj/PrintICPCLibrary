@@ -8,24 +8,24 @@ fi
 TEXFNAME=$2
 PAGETITLE="\\\\title{$3}"
 
+SCRIPTDIR=$(dirname $0)
 PATHSTR="${1}/*.cpp"
-TEXFSTR="${2}.tex"
+TEXFSTR="${SCRIPTDIR}/${2}.tex"
 
-sed "s/\\\\title{}/${PAGETITLE}/" tex_head.txt >> $TEXFSTR
+sed "s/\\\\title{}/${PAGETITLE}/" $SCRIPTDIR/tex_head.txt >> $TEXFSTR
 
 for file in `\find $PATHSTR -maxdepth 1 -type f`; do
     FILENAME="${file##*/}"
     FILESTR=`echo "\subsection*{${FILENAME}}" | sed 's/_/\\\\_/g'`
     echo $FILESTR >> $TEXFSTR
-    cat tex_code_head.txt $file tex_code_tail.txt >> $TEXFSTR
+    cat $SCRIPTDIR/tex_code_head.txt $file $SCRIPTDIR/tex_code_tail.txt >> $TEXFSTR
 done
 
-cat tex_tail.txt >> $TEXFSTR
+cat $SCRIPTDIR/tex_tail.txt >> $TEXFSTR
 
-platex $TEXFSTR
-dvipdfmx "${TEXFNAME}.dvi"
+platex -output-directory=$SCRIPTDIR $TEXFSTR
+dvipdfmx -o $SCRIPTDIR/$TEXFNAME.pdf $SCRIPTDIR/$TEXFNAME.dvi
 
-rm "${TEXFNAME}.aux"
-rm "${TEXFNAME}.dvi"
-rm "${TEXFNAME}.tex"
-rm "${TEXFNAME}.log"
+for ext in aux dvi tex log; do
+    rm $SCRIPTDIR/$TEXFNAME.$ext
+done
