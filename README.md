@@ -18,7 +18,7 @@ Clone or download this repository, and execute `generate.sh` by following the us
 
 `usage: bash generate.sh [<filepath>] [<texfilename>] [<pagetitle>]`
 
-* filepath: The path where files you want to merge exist
+* filepath: Folder path where files you want to merge exist
 * texfilename: The filename of exported PDF file. File extention is not needed.
 * pagetitle: It will be the pagetitle of PDF file
 
