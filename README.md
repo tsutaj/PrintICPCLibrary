@@ -32,7 +32,7 @@ Clone or download this repository, and execute `generate.sh` by following the us
 
 * This is not verified except GNU Bash version 4.3.11.
 * It requires pLaTeX, and dvipdfmx and imports `cpp` files by default. Please change `generate.sh`  in accordance with the situation.
-* By default, TeX file is automatically erased and PDF file only remain. If you want to remain both TeX and PDF files, please edit 28h line of `generate.sh`.
+* By default, TeX file is automatically erased and PDF file only remain. If you want to remain both TeX and PDF files, please edit 28th line of `generate.sh`.
 * For International Readers: 3rd line of `tex_head.txt` is not essential because this package is needed only for displaying Japanese. Please comment-out this line.
 * **Please note that I shall not be responsible for any loss, damages and troubles by using this program.**
 
