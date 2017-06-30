@@ -32,7 +32,7 @@ Clone or download this repository, and execute `generate.sh` by following the us
 
 * This is not verified except GNU Bash version 4.3.11.
 * It requires pLaTeX, and dvipdfmx and imports `cpp` files by default. Please change `generate.sh`  in accordance with the situation.
-* By default, TeX file is automatically erased and PDF file only remain. If you want to remain both TeX and PDF files, please comment-out 36th line of `generate.sh`.
+* By default, TeX file is automatically erased and PDF file only remain. If you want to remain both TeX and PDF files, please edit 28h line of `generate.sh`.
 * For International Readers: 3rd line of `tex_head.txt` is not essential because this package is needed only for displaying Japanese. Please comment-out this line.
 * **Please note that I shall not be responsible for any loss, damages and troubles by using this program.**
 
@@ -40,7 +40,7 @@ Clone or download this repository, and execute `generate.sh` by following the us
 
 * このプログラムは GNU Bash 4.3.11 以外では検証していません。
 * デフォルトでは pLaTeX と dvipdfmx が必要で、`cpp` ファイルがインポートの対象になっています。環境に応じて `generate.sh` を変更してください。
-* デフォルトでは PDF のみ残すことになっており、 TeX ファイルは実行後消えます。TeX ファイルも残したい場合は `generate.sh` 36 行目をコメントアウトしてください。
+* デフォルトでは PDF のみ残すことになっており、 TeX ファイルは実行後消えます。TeX ファイルも残したい場合は `generate.sh` 28 行目を編集してください。
 * 日本語も出力できるよう、`jlisting.sty` パッケージを使うようにしています。これが必要なければ、`tex_head.txt` の 3 行目をコメントアウトしてください。必要な場合、パッケージはこちらからダウンロードできます → [https://osdn.net/projects/mytexpert/downloads/26068/jlisting.sty.bz2/](https://osdn.net/projects/mytexpert/downloads/26068/jlisting.sty.bz2/)
 * **このプログラムを利用したことによるいかなる損害やトラブルについて責任を負いません。自己責任でご利用ください。**
 
